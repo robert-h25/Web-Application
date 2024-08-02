@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+{%block content%}
+<!-- implement simple ajax -->
+<!-- show records which the user has registered into the database -->
+
+<h1 class="page_title">A list of your current records:</h1>
+
+
+<table class = "table table-striped">
+    <tr>
+        <th>Artist Name</th>
+        <th>Record Name</th>
+        <th>Genres</th>
+        <th>Release Date</th>
+    </tr>
+    {% for record in records %}
+    <tr> 
+        <td>{{record.name}}</td>
+        <td>{{record.album_name}}</td>
+        <td>{{record.genre}}</td>
+        <td>{{record.release_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

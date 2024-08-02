@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{%block content%}
+
+<h1 class="page_title">User Login</h1>
+
+<!--Flashed messages-->
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+  <ul class="flash_message">
+   {% for message in messages %}
+    <li>{{ message }}</li>
+   {% endfor %}
+  </ul>
+ {% endif %}
+{% endwith %}
+
+<!--form-->
+<div class="form">
+    <form action="/login" method ="post" name="login">
+        {{ form.hidden_tag() }}
+        <p class="data">
+            Enter your Username:<br>
+             {{form.Username }} <br>           
+        </p>
+        <p class="data" type="password">
+            Enter Your password:<br>
+            {{form.Password}}<br>
+        </p>
+        <p class="submit">
+            Press submit to Login<br>
+            <input class = "btn btn-info" type="submit" value="Login">
+        </p>
+    </form>
+    
+</div>
+
+<!--change password option-->
+<div>
+    <a href="/changepassword">Click to change your Password.</a>
+</div>
+
+
+
+{% endblock %}

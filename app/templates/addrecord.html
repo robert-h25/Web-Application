@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+{%block content%}
+
+
+<h1 class="page_title"">Add a Record</h1>
+
+<!--Flashed messages-->
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+  <ul class="flash_message">
+   {% for message in messages %}
+    <li>{{ message }}</li>
+   {% endfor %}
+  </ul>
+ {% endif %}
+{% endwith %}
+
+<!--Form to get assessment information-->
+<div class="form">
+    <form action="/addrecord" method ="post" name="record">
+        {{ form.hidden_tag() }}
+        <p class="data">
+            Enter the Artist Name:<br>
+            {{form.ArtistName }}<br>
+        </p>
+        <p class="data">
+            Enter the AlbumName:<br>
+            {{form.AlbumName}}<br>
+        </p>
+        <p class="data">
+            Enter the Genres:<br>
+            {{form.Genres }}<br>
+        </p>
+        <p class="data">
+            Enter the Release Date:<br>
+            {{form.ReleaseDate }}<br>
+        </p>
+        <p class="submit">
+            Press submit to enter into the database.<br>
+            <input class = "btn btn-info" type="submit" value="Add Record">
+        </p>
+    </form>
+</div>
+
+
+{% endblock %}

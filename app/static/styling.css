@@ -1,0 +1,87 @@
+/*
+    Todo:
+    form
+
+*/
+.ul navbar-nav{
+    display:inline;
+}
+.li nav-item{
+    color: darkgray;
+    font-size: larger;
+}
+a:hover{
+    color: aqua;
+}
+.content div{
+    margin: 5px; 
+}
+.image-buttons {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+    transition-delay: 0.1s;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image-buttons:hover{
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    background-color: darkgrey;
+    color: white;
+}
+.location-buttons {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    color: mediumblue;
+    transition-delay: 0.1s;
+}
+.location-buttons:hover{
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgb(39, 118, 170);
+    color: white;
+}
+.form{
+    border-radius: 10px;
+    background-color: azure;
+    padding: 25px;
+}
+.data{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 6px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+.submit{
+
+    width: 100%;
+    padding: 15px 20px;
+    margin: 6px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.page_title{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.flash_message{
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 6px;
+    background-color: rgba(255, 255, 0, 0.562);
+    opacity: 10%;
+}
+.images{
+    text-align: center;
+}
+.description{
+    text-align: center;
+}

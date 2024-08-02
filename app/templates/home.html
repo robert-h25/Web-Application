@@ -1,0 +1,57 @@
+{%extends "base.html"%}
+{% block content %}
+
+<h1 class="page_title">Home</h1>
+<div class="description">
+    {{home.description}}
+
+</div>
+
+<!-- Display pictures and text-->
+
+<div class ="images">
+    <!--add spacing-->
+    <img class="picture" src="static/records.jpg" alt="Records" width="320" height="320">
+    <img class="picture" src="static/recordshop.jpg" alt="Record shop" width="500" height="320">
+</div>
+<div class="images">
+    <!-- button to hide pictures -->
+    <button id="hidepicture" class="image-buttons">Hide Pictures</button>
+    <button id="showpicture" class="image-buttons">Show Pictures</button>
+    <!--javascript for hiding/showing pictures-->
+    <script>
+        $(document).ready(function(){
+            $("#hidepicture").click(function() {
+                $("img.picture").hide();
+            });
+
+            $("#showpicture").click(function(){
+                $("img.picture").show();
+            });
+        });
+    </script>
+</div>
+
+<!-- geolocation -->
+<div class="images">
+    <button class="location-buttons" onclick="getLocation()">Show your location</button>
+    <p id="location"></p>
+    <script>
+        var x = document.getElementById("location");
+
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showposition);
+            }
+            else{
+                x.innerHTML = "Geolocation is not supported by this browser."
+            }
+        }
+
+        function showposition(position){
+            x.innerHTML = "Your Latitude: "+ position.coords.latitude + "<br>Your Longitude: " + position.coords.longitude;
+        }
+    </script>
+</div>
+
+{% endblock %}
